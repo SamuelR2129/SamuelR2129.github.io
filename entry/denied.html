@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restart</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+</head>
+<body>
+    <main class="main">
+        <img src="404-logo.png" class="logo-image">
+    
+        <div class="denied-container">
+            <h1 class="denied">SORRY, NOT TONIGHT!</h1>
+        </div>
+
+        <div class="restart-container">
+            <a href="question1.html">
+                <button class="restart-button">RESTART</button>
+            </a>
+        </div>
+    </main>
+</body>
+
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin-bottom: 100px;
+    height: 100%;
+    background-color: black;
+    font-family: Beatrice,sans-serif;
+
+}
+
+.main {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    min-height: 300px;
+    margin-top: 168px;
+}
+
+.logo-image {
+    width: 400px;
+    display: block;
+    z-index: 2;
+    bottom: 77px;
+    position: relative;
+}
+
+.denied-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 955px;
+    height: 107px;
+    padding: 10px;
+    z-index: 1;
+    bottom: 159px;
+    position: relative;
+}
+
+.denied {
+    font-size: 3rem;
+}
+
+.restart-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 97px;
+}
+
+a {
+    text-decoration: none;
+    z-index: 5;
+}
+
+.restart-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 5px solid red;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.restart-button:hover {
+    background-color: red;
+    color: black;
+
+}
+
+@media screen and (max-width: 600px) {
+    .logo-image {
+        width: 208px;
+        bottom: 57px;
+    }   
+
+    .denied{
+    font-size: 1.2em;
+    }
+
+    .denied-container {
+        margin-top: 36px;
+    }
+    
+
+    .restart-container {
+        bottom: 140px;
+    }
+
+}

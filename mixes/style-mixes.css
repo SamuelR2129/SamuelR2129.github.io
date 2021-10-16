@@ -1,0 +1,201 @@
+
+* {
+    box-sizing: border-box;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+}
+
+*::-webkit-scrollbar {
+    background: transparent; /* Chrome/Safari/Webkit */
+    width: 0px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Beatrice,sans-serif;
+    color: white;
+    background-color: black;
+}
+
+/* HEADER CSS */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: black;
+    color: white;
+    font-family: Beatrice,sans-serif;
+
+}
+
+.logo-image {
+    width: 40%;
+    margin: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 33%
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+
+.burger {
+    display: none;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+
+
+/* MAIN */
+
+.main-container{
+    position: relative;
+    margin: 5% 0 0 7%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artist {
+    width: 44%;
+    margin-right: 6%;
+}
+
+.scplayer {
+    width: 100%;
+    height: 450px;
+    position:relative;
+}
+
+div {
+    color: white;
+}
+
+.dj-name {
+    font-size: 4em;
+    margin-bottom: 0;
+}
+
+.genre {
+    font-size: 2em;
+    margin-top: 10px;
+    color: red;
+}
+
+@media screen and (max-width: 600px){
+
+    body, html{
+       width: 100%;
+       position: relative;
+       overflow-x: hidden;
+   }
+
+   /*NAV BAR------------------------------------*/
+
+   .logo-image {
+       width: 25%;
+   }
+   .nav-links {
+       position: absolute;
+       right: 0px;
+       height: 42vh;
+       top: 8vh;
+       background-color: black;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 40%;
+       transform: translateX(100%);
+       transition: transform 0.5s ease-in; 
+       z-index: 1; 
+   }
+
+   .nav-links li {
+       opacity: 0;
+
+   }
+
+   .nav-links a {
+       padding-right: 33px;
+
+   }
+
+   .burger {
+       display: block;
+       margin-right: 10%;
+       cursor: pointer;
+   }
+
+   .nav-links a:active {
+       color: red;
+   }
+
+   /*MAIN CONTENT-------------------------*/
+
+   .artist {
+    width: 91%;
+    }
+
+    .dj-name {
+        font-size: 2em;
+    }
+
+    .genre {
+        font-size: 1.5em;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
