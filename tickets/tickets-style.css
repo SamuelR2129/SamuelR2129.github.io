@@ -59,6 +59,8 @@ nav {
 
 .nav-links li {
     list-style: none;
+    padding-right: 13px;
+
 }
 
 .nav-links a {
@@ -174,7 +176,7 @@ input[type=text]:focus{
 
 .hidden { display: none; }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
     body, html{
        width: 100%;
